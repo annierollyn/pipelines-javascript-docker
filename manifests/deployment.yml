@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: annierollynpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: annierollynpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: annierollynpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: annierollynpipelinesjavascriptdocker 
+          image: arsbcontainerregistry.azurecr.io/annierollynpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
